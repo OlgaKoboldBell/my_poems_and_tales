@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Myusers</title>
+  <style>
+    body {
+      background-color: #e0ffe0;
+      color: #00cc7a;
+    }
+    h1, p{
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div class="">
+  <h3>Список користувачів</h3>
+  <div class="container">
+    <div th:each="user: ${users}">
+      <div class="">
+        <p>Email:</p>
+        <h4 th:text="${user.getLogin()}"></h4>
+        <p>password:</p>
+        <p th:text="${user.getPassword()}"></p>
+        <p th:text="${user.getDate()}"></p>
+      </div>
+    </div>
+  <a class="nav-link" style="color: #5c00e6;" href="/">На головну</a>
+</div>
+</body>
+</html>

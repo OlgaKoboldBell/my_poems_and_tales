@@ -1,0 +1,111 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+<!--    <title>Counters</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-color: #e0ffe0;-->
+<!--            color: #00cc7a;-->
+<!--        }-->
+<!--        h1, p{-->
+<!--            margin: 0 auto;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<header th:insert="sections/header_tales::header_tales"></header>-->
+<!--<div class="container">-->
+<!--    <div class="about">-->
+<!--        &lt;!&ndash;        <img src="/images/img_avtor.jpg">&ndash;&gt;-->
+<!--        <div class="text">-->
+<!--            <p>Казки-лічилки Рахувати можна все!</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<footer th:insert="sections/footer::footer"></footer>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Tales_counters</title>
+    <style>
+        body {
+            background-color: #e0ffe0;
+            color: #00cc7a;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .col{
+            border-radius: 10%;
+            border: #00cc7a 1px solid;
+            margin: 10px;
+        }
+        .col_text{
+            padding: 5% 8%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            padding: 5% 8%;
+        }
+    </style>
+</head>
+<body>
+<header th:insert="sections/header_tales::header_tales"></header>
+<div class="container">
+    <h3>Казкові історії із лічилками</h3>
+    <h2>Рахувати можна все!</h2>
+    <div class="about">
+        <div class="col">
+            <img src="/images/img_tales_counters_1.jpg">
+         </div>
+        <div class="col">
+            <div class="col_text">
+            <h3>Рахувати можна все!</h3>
+            <h4>Частина 1. Подорож на поїзді</h4>
+            <p>Дивитися на Ютуб-каналі:</p>
+            <p><a class="nav-link" href="https://www.youtube.com/watch?v=FWDmRqN9T8I&t=9s" style="color: #5c00e6;">https://www.youtube.com/watch?v=FWDmRqN9T8I&t=9s</a></p>
+            <p>Під час подорожі на поїзді мама і тато пропонують дітям пограти у веселу гру під
+            назвою "Рахувати можна все!" Дітвора приймають виклик та у вигляді віршованих лічилок рахують
+            лісових та диких звірят, рибок, казкових істот та зимові розваги... Подорож
+            проходить весело та швидко.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="col">
+            <div class="col_text">
+            <h3>Рахувати можна все!</h3>
+            <h4>Частина 2. Забави на морі</h4>
+            <p>Дивитися на Ютуб-каналі:</p>
+            <p><a class="nav-link" href="https://www.youtube.com/watch?v=VPrft7LBe3I&t=8s" style="color: #5c00e6;">https://www.youtube.com/watch?v=VPrft7LBe3I&t=8s</a></p>
+            <p>Під час відпочинку на морі батьки розважають дітей цікавими завданнями, продовжуючи
+            грати у "Рахувати можна все!" Цього разу події на березі моря розважають лічилки про кольори, транспорт,
+            фруктові дерева, літні розваги та домашні улюбленці.</p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="/images/img_tales_counters_2.jpg">
+        </div>
+
+    </div>
+
+
+</div>
+
+<footer th:insert="sections/footer::footer"></footer>
+</body>
+</html>

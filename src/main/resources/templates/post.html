@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Сomments</title>
+  <style>
+    body {
+      background-color: #e0ffe0;
+      color: #00cc7a;
+    }
+    h1, p{
+      margin: 0 auto;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      padding: 2% 0 0 4%;
+    }
+    .container{
+      padding: 3%;
+      margin-bottom: 2%;
+    }
+  </style>
+</head>
+<body>
+<header th:insert="sections/header::header"></header>
+<img src="/images/img_post.jpg">
+<div class="container">
+
+  <h4 th:text="${post.getDescription()}"></h4>
+  <p th:text="${post.getTitle()}"></p>
+  <p th:text="${post.getDate()}"></p>
+
+    <div th:if="${userLogin eq 'okobilska@gmail.com'}">
+         <a th:href="'/blogmain/'+${post.getId()}+'/edit'">Редагувати</a>
+         <a th:href="'/blogmain/'+${post.getId()}+'/remove'">Видалити</a>
+     </div>
+</div>
+<footer th:insert="sections/footer::footer"></footer>
+</body>
+</html>

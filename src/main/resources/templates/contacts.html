@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Contacts</title>
+    <style>
+        body {
+            background-color: #e0ffe0;
+            color: #00cc7a;
+        }
+        h1, p{
+            margin: 0 auto;
+        }
+
+        .contacts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contacts img {
+            margin: 50px;
+            width: 700px;
+            height: 380px;
+        }
+        .contacts .text {
+            flex: 1;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<header th:insert="sections/header::header" style="background-color: #4dffb8;"></header>
+<div class="container">
+
+    <div class="contacts">
+        <a href="https://www.youtube.com/channel/UC_IZdiPIewPFytbNbpdQLEA">
+            <img src="/images/img_canal.png">
+        </a>
+        <div class="text">
+            <h1>Контакти</h1>
+            <p>Звернутися до автора</p>
+            <p>з питань використання віршів або казок</p>
+            <p>чи з побажаннями написати казку, лічилки, вірш на замовлення</p>
+            <p>можна</p>
+            <p>за електоронною адресою:</p>
+            <h3>okobilska@gmail.com</h3>
+            <br>
+            <p>Перейти на Ютуб-канал автора можна, натиснувши на зображення</p>
+            <br>
+            <p>Не забудьте залишити відгук!</p>
+            <p>Відгук може залишити лише зареєстрований читач</p>
+<!--            <div th:if="${login eq 'okobilska@gmail.com'}">-->
+
+            <div th:if="${userLogin != null and userLogin != ''}">
+                <a class="nav-link" href="/blog/new" style="color: #5c00e6;">Залишити відгук</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer th:insert="sections/footer::footer" style="background-color: #4dffb8;"></footer>
+</body>
+</html>
